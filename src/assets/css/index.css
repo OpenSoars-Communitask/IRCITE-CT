@@ -16,15 +16,6 @@ body {
 }
 
 
-.hero-frame {
-  width: 100%;
-  margin-right: auto;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-}
-
 /*--------------START of Intro Section ------------------------*/
 
 nav {
@@ -154,6 +145,17 @@ main {
   margin-left: 1.2in;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.hero-frame {
+  width: 100%;
+  margin-right: auto;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
 }
 
 
@@ -287,19 +289,26 @@ img {
 
 .image-text {
   position: absolute;
-  bottom: 100px; /* Adjust as needed */
-  left: 100px; /* Adjust as needed */
+  bottom: 280px; /* Adjust as needed */
+  left: 120px; /* Adjust as needed */
   color: white; /* Text color */
-  font-size: 18px; /* Font size */
-  background-color: rgba(0, 0, 0, 0); /* Background color with transparency */
-  padding: 5px 10px; /* Padding */
-  opacity: 0;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
-.image-text[data-aos="fade-left"].aos-animate {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+.team-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8rem;
+  font-weight: 700;
+  color: #5cb4f8;
+  position: absolute;
+  left: 100px;
+  bottom: 120px;
+
 }
+
+
 /*--------------END of ABOUT US Section ------------------------*/
 
 
