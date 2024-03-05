@@ -1,0 +1,609 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+
+/*--------------START of Intro Section ------------------------*/
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+nav.sticky {
+  padding: 15px 20px;
+  background: whitesmoke;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .nav-content {
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo a {
+  font-weight: 500;
+  font-size: 35px;
+  color: #353842;
+}
+nav.sticky .logo a {
+  color: #fff;
+}
+
+.nav-content .nav-links {
+  display: flex;
+}
+
+.nav-content .nav-links li {
+  list-style: none;
+  margin: 0 8px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #0e2431;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 4px;
+  transition: all 0.3 ease;
+}
+
+.nav-links li a:hover {
+  color: #5cb4f8;
+}
+
+.nav.sticky .nav-links li a {
+  color: #fff;
+  transition: all 0.4 ease;
+}
+
+.nav.sticky .nav-links li a:hover {
+  color: #0e2431;
+}
+
+/*--------------END of NAVBAR Section ------------------------*/
+
+
+main {
+  max-width: 1580px; /* Adjust the value as needed */
+  margin: 0 auto; /* This centers the element horizontally */
+  height: 10410px;
+}
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: .5;
+  &:before {
+    content: '';
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: #222220;
+    background-color: #fcfcfa;
+  }
+}
+
+
+/*--------------Start of Intro Section ------------------------*/
+/* Start of Rotating Text */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+.service {
+  font-size: 4rem;
+  top: 50%;
+}
+
+.service_p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(2.648rem, 6vw, 4.241rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: black;
+}
+
+.word {
+  position: absolute;
+  width: 500px;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.word1 {
+  color: #56ded8;
+}
+
+.word2 {
+  color: #23CDF6;
+}
+
+.word3 {
+  color: #56ded8;
+}
+
+.word4 {
+  color: #23CDF6;
+}
+
+.word5 {
+  color: #56ded8;
+}
+/* End of Rotating Text */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.intro {
+  padding-bottom: 6rem;
+  padding-top: 10rem;
+}
+
+.container {
+  height: auto;
+  padding: 0 1.25rem;
+  position: relative;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  column-gap: 10rem;
+}
+
+.paragraph {
+  font-family: inherit;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  text-wrap: balance;
+  color: black;
+}
+.getStarted {
+  padding: 5px;
+  background: #fff;
+  color: rgb(54, 54, 54);
+  position: relative;
+  z-index: 1;
+  transition: color 400ms;
+  font-weight: 600;
+  font-size: larger;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  user-select: none;
+  background: none;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.getStarted::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 200ms ease-out;
+  transform: scaleX(0);
+  transform-origin: bottom;
+  text-decoration: none;
+
+  background: linear-gradient(90deg, #56ded8, #8df1f1, #56ded8, #8df1f1);
+  background-size: 400% 400%;
+  -webkit-animation: gradientBG 7s ease infinite forwards;
+  animation: gradientBG 7s ease infinite forwards;
+}
+
+.getStarted:hover::before {
+  transform: scaleX(1);
+  text-decoration: none;
+}
+
+.getStarted:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner-inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.75rem;
+  width: 100%;
+}
+
+.cppImg {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  width: 800px;
+}
+
+
+@media only screen and (min-width: 48rem) {
+  .container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  .container {
+    grid-template-columns: 1fr max-content;
+    column-gap: 8rem;
+    margin-top: 1rem;
+  }
+}
+.banner-image {
+  display: block;
+  max-width: 18rem;
+  height: auto;
+  margin-top: 2rem;
+  object-fit: cover;
+  justify-self: center;
+}
+@media only screen and (min-width: 48rem) {
+  .banner-image {
+    order: 1;
+    max-width: 20rem;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  .banner-image {
+    max-width: 25rem;
+    height: auto;
+    margin-right: 5rem;
+  }
+}
+
+.banner-image {
+  width: 350px;
+  height: 300px;
+  margin: 50px auto;
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+/*--------------END of Intro Section ------------------------*/
+
+
+/*--------------START of ABOUT US Section ------------------------*/
+.aboutUS{
+  margin-top: 80px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 100px; /* Adjust as needed */
+  left: 100px; /* Adjust as needed */
+  color: white; /* Text color */
+  font-size: 18px; /* Font size */
+  background-color: rgba(0, 0, 0, 0); /* Background color with transparency */
+  padding: 5px 10px; /* Padding */
+  opacity: 0;
+}
+
+.image-text[data-aos="fade-left"].aos-animate {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+/*--------------END of ABOUT US Section ------------------------*/
+
+
+/*--------------START of Find a Job Section ------------------------*/
+/* -------- title style ------- */
+.line-title {
+  position: relative;
+  width: 400px;
+}
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+.line-title::after {
+  width: 32px;
+  background: #e73700;
+}
+
+/******* Middle section CSS Start ******/
+/* -------- Landing page ------- */
+.findJob {
+  padding: 60px 50px;
+  margin-top: 80px;
+}
+.findJob .owl-stage {
+  margin: 15px 0;
+  display: flex;
+  display: -webkit-flex;
+}
+.findJob .item {
+  margin: 0 15px 60px;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.findJob .item.active {
+  width: 500px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+.findJob .item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+.findJob .item-desc {
+  padding: 0 24px 12px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.findJob .item.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+.findJob .item-desc p {
+  opacity: 0;
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.2s;
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
+.findJob .item.active .item-desc p {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.findJob .owl-theme.custom-carousel .owl-dots {
+  margin-top: -20px;
+  position: relative;
+  z-index: 5;
+}
+/******** Middle section CSS End *******/
+
+/***** responsive css Start ******/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* -------- Landing page ------- */
+  .findJob {
+    padding: 50px 30px;
+  }
+  .findJob .item {
+    margin: 0 12px 60px;
+    width: 260px;
+    height: 360px;
+  }
+  .findJob .item.active {
+    width: 400px;
+  }
+  .findJob .item-desc {
+    transform: translateY(calc(100% - 46px));
+    -webkit-transform: translateY(calc(100% - 46px));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .line-title {
+    width: 330px;
+  }
+
+  /* -------- Landing page ------- */
+  .findJob {
+    padding: 50px 30px 40px;
+  }
+  .findJob .item {
+    margin: 0 12px 60px;
+    width: 240px;
+    height: 330px;
+  }
+  .findJob .item.active {
+    width: 360px;
+  }
+  .findJob .item-desc {
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .line-title {
+    width: 250px;
+  }
+
+  .findJob {
+    padding: 30px 15px 20px;
+  }
+  .findJob .item {
+    margin: 0 10px 40px;
+    width: 200px;
+    height: 280px;
+  }
+  .findJob .item.active {
+    width: 270px;
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+  }
+  .findJob .item-desc {
+    padding: 0 14px 5px;
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}
+
+/*--------------END of Find a Job Section ------------------------*/
+
+
+
+/*--------------START of Avail Services ------------------------*/
+.availService{
+  padding: 60px 50px;
+}
+
+.grid-container{
+  display: flex;
+  flex-flow: column nowrap;
+}
+/*CSS Grid*/
+.section-grid{
+   display: flex; 
+   padding-left: 25px;
+   padding-right: 25px;
+}
+.grid-prod{
+  flex: 1 1 auto;
+  display: flex; 
+  flex-flow: row wrap;  
+}
+.prod-grid{
+  flex: 1 1 25%;
+  margin:2%;
+  padding:12px;
+}
+
+.prod-grid img{
+  width:100%;
+}
+.grid-container h3, .grid-container p{
+  margin-top: 15px;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.grid-container h3{
+  font-weight: 700;
+}
+
+@media (min-width : 320px) and (max-width : 480px) { 
+  .grid-container  .section-list, .buttons{
+    display: none;
+  }
+}
+/*--------------END of Avail Services ------------------------*/
