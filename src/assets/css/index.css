@@ -132,7 +132,7 @@ main {
   vertical-align: top;
   margin: 0;
   font-family: inherit;
-  font-size: clamp(2.648rem, 6vw, 4.241rem);
+  font-size: clamp(2.648rem, 6vw, 5rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -1px;
@@ -186,9 +186,6 @@ main {
   color: #23CDF6;
 }
 
-.word5 {
-  color: #56ded8;
-}
 /* End of Rotating Text */
 
 img {
