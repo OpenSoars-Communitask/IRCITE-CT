@@ -32,6 +32,7 @@ nav.sticky {
 nav .nav-content {
   height: 100%;
   max-width: 1200px;
+  padding-top: 5px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -166,6 +167,9 @@ main {
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.word0 {
+  color: black;
+}
 .word1 {
   color: #56ded8;
 }
