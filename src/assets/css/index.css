@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -8,7 +12,7 @@
 
 body {
   min-height: 100vh;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /*--------------START of Intro Section ------------------------*/
@@ -31,6 +35,7 @@ nav.sticky {
 nav .nav-content {
   height: 100%;
   max-width: 1200px;
+  padding-top: 5px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -117,22 +122,38 @@ main {
 /*--------------Start of Intro Section ------------------------*/
 /* Start of Rotating Text */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
-.service {
-  font-size: 4rem;
-  top: 50%;
-}
 
 .service_p {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-  font-family: inherit;
-  font-size: clamp(2.648rem, 6vw, 4.241rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -1px;
-  color: black;
+  text-align: left;
+  margin-left: 1.2in;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+  font-family: 'Inter', sans-serif;
+    font-size: 4.5rem;
+    margin-top: 1em;
+    margin-bottom: .2em;
+    font-weight: 800;
+    color: #000000;
 }
+
+.paragraph {
+  text-align: left;
+  margin-left: 1.2in;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.hero-frame {
+  width: 100%;
+  margin-right: auto;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+}
+
 
 .word {
   position: absolute;
@@ -162,6 +183,9 @@ main {
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.word0 {
+  color: black;
+}
 .word1 {
   color: #56ded8;
 }
@@ -178,9 +202,6 @@ main {
   color: #23cdf6;
 }
 
-.word5 {
-  color: #56ded8;
-}
 /* End of Rotating Text */
 
 img {
@@ -189,86 +210,10 @@ img {
   height: auto;
   object-fit: cover;
 }
+
 .intro {
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
   padding-top: 10rem;
-}
-
-.container {
-  height: auto;
-  padding: 0 1.25rem;
-  position: relative;
-  display: grid;
-  align-items: center;
-  width: 100%;
-  column-gap: 10rem;
-}
-
-.paragraph {
-  font-family: inherit;
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  text-wrap: balance;
-  color: black;
-}
-.getStarted {
-  padding: 5px;
-  background: #fff;
-  color: rgb(54, 54, 54);
-  position: relative;
-  z-index: 1;
-  transition: color 400ms;
-  font-weight: 600;
-  font-size: larger;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  user-select: none;
-  background: none;
-  box-shadow: none;
-  text-decoration: none;
-}
-
-.getStarted::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 200ms ease-out;
-  transform: scaleX(0);
-  transform-origin: bottom;
-  text-decoration: none;
-
-  background: linear-gradient(90deg, #56ded8, #8df1f1, #56ded8, #8df1f1);
-  background-size: 400% 400%;
-  -webkit-animation: gradientBG 7s ease infinite forwards;
-  animation: gradientBG 7s ease infinite forwards;
-}
-
-.getStarted:hover::before {
-  transform: scaleX(1);
-  text-decoration: none;
-}
-
-.getStarted:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-.banner-inner {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.75rem;
-  width: 100%;
-}
-
-.cppImg {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .text {
@@ -338,19 +283,26 @@ img {
 
 .image-text {
   position: absolute;
-  bottom: 100px; /* Adjust as needed */
-  left: 100px; /* Adjust as needed */
+  bottom: 280px; /* Adjust as needed */
+  left: 120px; /* Adjust as needed */
   color: white; /* Text color */
-  font-size: 18px; /* Font size */
-  background-color: rgba(0, 0, 0, 0); /* Background color with transparency */
-  padding: 5px 10px; /* Padding */
-  opacity: 0;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
-.image-text[data-aos="fade-left"].aos-animate {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+.team-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8rem;
+  font-weight: 700;
+  color: #5cb4f8;
+  position: absolute;
+  left: 100px;
+  bottom: 120px;
+
 }
+
+
 /*--------------END of ABOUT US Section ------------------------*/
 
 /*--------------START of Find a Job Section ------------------------*/
