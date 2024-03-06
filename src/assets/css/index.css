@@ -11,7 +11,6 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-
 /*--------------START of Intro Section ------------------------*/
 
 nav {
@@ -79,11 +78,9 @@ nav.sticky .logo a {
 
 /*--------------END of NAVBAR Section ------------------------*/
 
-
 main {
   max-width: 1580px; /* Adjust the value as needed */
   margin: 0 auto; /* This centers the element horizontally */
-  height: 10410px;
 }
 
 .hr-text {
@@ -94,9 +91,9 @@ main {
   color: black;
   text-align: center;
   height: 1.5em;
-  opacity: .5;
+  opacity: 0.5;
   &:before {
-    content: '';
+    content: "";
     background: linear-gradient(to right, transparent, #818078, transparent);
     position: absolute;
     left: 0;
@@ -110,13 +107,12 @@ main {
     display: inline-block;
     color: black;
 
-    padding: 0 .5em;
+    padding: 0 0.5em;
     line-height: 1.5em;
     color: #222220;
     background-color: #fcfcfa;
   }
 }
-
 
 /*--------------Start of Intro Section ------------------------*/
 /* Start of Rotating Text */
@@ -171,7 +167,7 @@ main {
 }
 
 .word2 {
-  color: #23CDF6;
+  color: #23cdf6;
 }
 
 .word3 {
@@ -179,7 +175,7 @@ main {
 }
 
 .word4 {
-  color: #23CDF6;
+  color: #23cdf6;
 }
 
 .word5 {
@@ -279,7 +275,6 @@ img {
   width: 800px;
 }
 
-
 @media only screen and (min-width: 48rem) {
   .container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -332,9 +327,8 @@ img {
 }
 /*--------------END of Intro Section ------------------------*/
 
-
 /*--------------START of ABOUT US Section ------------------------*/
-.aboutUS{
+.aboutUS {
   margin-top: 80px;
 }
 
@@ -358,7 +352,6 @@ img {
   transition: opacity 0.5s ease-in-out;
 }
 /*--------------END of ABOUT US Section ------------------------*/
-
 
 /*--------------START of Find a Job Section ------------------------*/
 /* -------- title style ------- */
@@ -559,51 +552,135 @@ img {
 
 /*--------------END of Find a Job Section ------------------------*/
 
-
-
 /*--------------START of Avail Services ------------------------*/
-.availService{
+.availService {
   padding: 60px 50px;
 }
 
-.grid-container{
+.grid-container {
   display: flex;
   flex-flow: column nowrap;
 }
 /*CSS Grid*/
-.section-grid{
-   display: flex; 
-   padding-left: 25px;
-   padding-right: 25px;
+.section-grid {
+  display: flex;
+  padding-left: 25px;
+  padding-right: 25px;
 }
-.grid-prod{
+.grid-prod {
   flex: 1 1 auto;
-  display: flex; 
-  flex-flow: row wrap;  
+  display: flex;
+  flex-flow: row wrap;
 }
-.prod-grid{
+.prod-grid {
   flex: 1 1 25%;
-  margin:2%;
-  padding:12px;
+  margin: 2%;
+  padding: 12px;
 }
 
-.prod-grid img{
-  width:100%;
+.prod-grid img {
+  width: 100%;
 }
-.grid-container h3, .grid-container p{
+.grid-container h3,
+.grid-container p {
   margin-top: 15px;
   text-align: center;
   line-height: 1.5;
   letter-spacing: 1px;
 }
 
-.grid-container h3{
+.grid-container h3 {
   font-weight: 700;
 }
 
-@media (min-width : 320px) and (max-width : 480px) { 
-  .grid-container  .section-list, .buttons{
+@media (min-width: 320px) and (max-width: 480px) {
+  .grid-container .section-list,
+  .buttons {
     display: none;
   }
 }
 /*--------------END of Avail Services ------------------------*/
+.faq {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 100%;
+  max-width: 1300px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.topic {
+  padding: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-bottom: solid 1px #ebebeb;
+}
+.open {
+  cursor: pointer;
+  display: block;
+  padding: 0px;
+}
+.open:hover {
+  opacity: 0.7;
+}
+.expanded {
+  background-color: #f5f5f5;
+  transition: all 0.3s ease-in-out;
+}
+.question {
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+.answer {
+  font-size: 16px;
+  line-height: 26px;
+  display: none;
+  margin-bottom: 30px;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.faq-t {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  display: inline-block;
+  float: right;
+  position: relative;
+  top: -55px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+.faq-o {
+  top: -50px;
+  -moz-transform: rotate(-224deg);
+  -ms-transform: rotate(-224deg);
+  -webkit-transform: rotate(-224deg);
+  transform: rotate(-224deg);
+}
+@media only screen and (max-width: 480px) {
+  .faq-t {
+    display: none;
+  }
+  .question {
+    padding-right: 0px;
+  }
+  .answer {
+    margin-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
