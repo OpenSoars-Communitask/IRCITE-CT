@@ -574,7 +574,7 @@ img {
 
 
 .badges-frame {
-  margin: 430vh;
+  margin: 450vh;
   position: absolute;
   width: 100%;
   margin-right: auto;
@@ -590,7 +590,7 @@ img {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
-  margin-top: 6rem;
+  margin-top: 14rem;
   color: #1d1b1b;
 }
 
@@ -607,7 +607,7 @@ img {
 }
 
 .map-frame {
-  margin: 577vh;
+  margin: 595vh;
   position: absolute;
   width: 100%;
   margin-right: auto;
@@ -616,21 +616,18 @@ img {
   right: 0;
 }
 
-
-
 .map-title {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   font-family: "Josefin Sans", sans-serif;
   font-size: 10rem;
   color: #1d1b1b;
-  margin-top: 5in; 
+  margin-top: 4.3in; 
   font-weight: 800;
 
   display: grid;
   place-items: center;
   align-content: center;
 }
-
 
 .hidden {
   opacity: 0;
@@ -655,7 +652,7 @@ img {
   width: 100%;
   background-color: #fff;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 120vh;
 }
 .faq h1{
   font-weight: 700;
