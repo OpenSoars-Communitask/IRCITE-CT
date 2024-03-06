@@ -1,6 +1,6 @@
 {
     "canisters": {
-        "icp_simple_site": {
+        "IRCITE-CT": {
             "frontend": {
                 "entrypoint": "src/index.html"
             },
